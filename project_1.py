@@ -23,22 +23,19 @@ def choose_restaurant():
     restaurant_selected = random_choice(restaurants)
     return restaurant_selected
 
-temp_res = choose_restaurant()
-real_res = temp_res
+
 
 def choose_transportation():
     transpo_selected = random.choice(transportation)
     return transpo_selected
 
-temp_transpo = choose_transportation()
-real_transpo = temp_transpo
+
 
 def choose_entertainment():
     ent_selected = random.choice(entertainment)
     return ent_selected
 
-temp_ent = choose_entertainment()
-real_ent = temp_ent
+
 
 greeting_message()
 
@@ -46,14 +43,20 @@ def meat_and_potatoes():
     temp_des = choose_destination()
     real_des = temp_des
     print(f"Great! You got {real_des}. Now Let's get a Restaurant. ")
+    temp_res = choose_restaurant()
+    real_res = temp_res
     print(f"You're restaurant is {real_res}! Transportation is next. ")
+    temp_transpo = choose_transportation()
+    real_transpo = temp_transpo
     print(f"You're going to get to {real_des} in a {real_transpo}! ")
+    temp_ent = choose_entertainment()
+    real_ent = temp_ent
     print(f"After eating, your entertainment is {real_ent}! What fun. ")
     happy = input('Do you want to re-generate this trip? ')
     if happy == 'Yes':
         meat_and_potatoes()
     else:
-        print(f"Wonderful! Your trip is complete. You will be traveling to {real_des} in a {real_transpo}. You will eat at{real_res} and then go {real_ent}.")
+        print(f"Wonderful! Your trip is complete. You will be traveling to {real_des} in a {real_transpo}. You will eat at {real_res} and then go {real_ent}.")
 
 
 meat_and_potatoes()
