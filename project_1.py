@@ -1,49 +1,89 @@
 import random
 
+destinations = ['Colorado', 'Arizona', 'South Dakota', 'California']
+restaurants = ['Applebees', 'Silver Diner', 'Golden Corral', 'TGI Fridays', 'Bar Louie']
+transportation = ['Plane', 'Bus', 'Car', 'Train', 'RV']
+entertainment = ['Biking', 'Skiing', 'Rafting', 'Sky Diving', 'Scuba Diving', 'Underwater Basket Weaving']
+
+def greeting_message():
+    name = input("Let's start with your name. Who are you? ")
+    print(f"Hello {name}, let's generate your trip! ")
+
+def random_choice(some_list):
+    random_output = random.choice(some_list)
+    return random_output
+
+def choose_destination():
+    destination_selected = random_choice(destinations)
+    return destination_selected
+
+
+
+def choose_restaurant():
+    restaurant_selected = random_choice(restaurants)
+    return restaurant_selected
+
+temp_res = choose_restaurant()
+real_res = temp_res
+
+def choose_transportation():
+    transpo_selected = random.choice(transportation)
+    return transpo_selected
+
+temp_transpo = choose_transportation()
+real_transpo = temp_transpo
+
+def choose_entertainment():
+    ent_selected = random.choice(entertainment)
+    return ent_selected
+
+temp_ent = choose_entertainment()
+real_ent = temp_ent
+
+greeting_message()
+
+def meat_and_potatoes():
+    temp_des = choose_destination()
+    real_des = temp_des
+    print(f"Great! You got {real_des}. Now Let's get a Restaurant. ")
+    print(f"You're restaurant is {real_res}! Transportation is next. ")
+    print(f"You're going to get to {real_des} in a {real_transpo}! ")
+    print(f"After eating, your entertainment is {real_ent}! What fun. ")
+    happy = input('Do you want to re-generate this trip? ')
+    if happy == 'Yes':
+        meat_and_potatoes()
+    else:
+        print(f"Wonderful! Your trip is complete. You will be traveling to {real_des} in a {real_transpo}. You will eat at{real_res} and then go {real_ent}.")
+
+
+meat_and_potatoes()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Features:
 
 # (5 points): As a developer, I want to make at least three commits with descriptive messages.
 
 # (5 points): As a developer, I want to store my destinations, restaurants, mode of transportation, and entertainments in their own separate lists.
 
-def the_list_we_want():
-    what_user_wants = input('What do you want to choose next? (Type one of these options: Destination, Transportation, or Entertainment) ')
-    if what_user_wants == 'Destination':
-        return ['Colorado', 'Arizona', 'South Dakota', 'California']
-    if what_user_wants == 'Transportation':
-        return ['Plane', 'Bus', 'Car', 'Train', 'RV']
-    if what_user_wants == 'Entertainment':
-        return ['Biking', 'Skiing', 'Rafting', 'Sky Diving', 'Scuba Diving', 'Underwater Basket Weaving']
 
 # (5 points): As a user, I want a destination to be randomly selected for my day trip.
-
-def random_choice():
-    our_list = the_list_we_want()
-    random.choice(our_list)
-    user_y_or_n = input('Are you happy with this selection? Yes or No ')
-    if user_y_or_n == 'Yes':
-        return our_list
-    else:
-        random_choice()
-        
-print(random_choice())
-
-
-
-
-
-
-
-
-# destinations =[....]
-# restaurants = [...]
-
-# def randomChoice(someList):
-#     # return a choice
-
-# def genAllChoices():
-#     # for store in variables
-    # chosenDest = randomChoice(destinations)
 
 # (5 points): As a user, I want a restaurant to be randomly selected for my day trip.
 
