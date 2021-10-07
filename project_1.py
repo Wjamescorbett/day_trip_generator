@@ -17,27 +17,17 @@ def choose_destination():
     destination_selected = random_choice(destinations)
     return destination_selected
 
-
-
 def choose_restaurant():
     restaurant_selected = random_choice(restaurants)
     return restaurant_selected
-
-
 
 def choose_transportation():
     transpo_selected = random.choice(transportation)
     return transpo_selected
 
-
-
 def choose_entertainment():
     ent_selected = random.choice(entertainment)
     return ent_selected
-
-
-
-greeting_message()
 
 def meat_and_potatoes():
     temp_des = choose_destination()
@@ -58,25 +48,8 @@ def meat_and_potatoes():
     else:
         print(f"Wonderful! Your trip is complete. You will be traveling to {real_des} in a {real_transpo}. You will eat at {real_res} and then go {real_ent}.")
 
-
+greeting_message()
 meat_and_potatoes()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Features:
@@ -84,7 +57,6 @@ meat_and_potatoes()
 # (5 points): As a developer, I want to make at least three commits with descriptive messages.
 
 # (5 points): As a developer, I want to store my destinations, restaurants, mode of transportation, and entertainments in their own separate lists.
-
 
 # (5 points): As a user, I want a destination to be randomly selected for my day trip.
 
@@ -101,3 +73,4 @@ meat_and_potatoes()
 # (10 points): As a user, I want to display my completed trip in the console.
 
 # (5 points): As a developer, I want all of my functions to have a Single Responsibility. Remember, each function should do just one thing!
+
